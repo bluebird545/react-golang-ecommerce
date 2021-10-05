@@ -1,0 +1,80 @@
+// @import "../../sass/colors";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+
+  &__far-left {
+    margin-left: 58px;
+  }
+  &__middle {
+    .brand {
+      font-size: 30px;
+    }
+  }
+  &__far-right {
+    margin-right: 58px;
+  }
+
+  ul {
+    li {
+      // float: left;
+      display: inline-block;
+      list-style-type: none;
+      font-size: 18px;
+      margin: 10px;
+
+      &:after {
+        clear: both;
+      }
+
+      a {
+        &:hover {
+          color: $accent;
+          transition: color 10ms ease-in;
+        }
+      }
+    }
+  }
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.cartWrapper {
+  .cartIcon {
+    position: relative;
+    // color: white;
+    // border: 1px solid black;
+  }
+  .cartQty {
+    position: absolute;
+    top: 3.2em;
+    right: 4.8em;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid $accent;
+    border-radius: 50%;
+    background-color: $accent;
+    padding: 1px 4px;
+    font-family: sans-serif;
+  }
+}
+.rotating-banner {
+  font-family: Helvetica, san-serif;
+  background-color: black;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+  }
+}

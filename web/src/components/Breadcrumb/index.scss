@@ -1,0 +1,28 @@
+.breadcrumbs__wrapper {
+  padding: 1em 10em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+
+  .breadcrumbs {
+    list-style: none;
+    li {
+      display: inline;
+      + li:before {
+        padding: 8px;
+        content: "/\00a0";
+      }
+      a {
+        color: #0275d8;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        color: black;
+      }
+    }
+  }
+}

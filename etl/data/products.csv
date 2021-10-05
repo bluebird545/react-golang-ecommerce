@@ -1,0 +1,4 @@
+Product ID,Handle,Name,Category,Tags,Option1 Name,Option1 Value,Price,Image URL,Image ALT Text,Ingredients
+1111,argan-face-oil,Argan Face Oil,face-care,"face,oil",16oz,16oz,19.99,http://image.com/argan-face-oil,Repairing Argan Facial Oil,"argan oil, cocunut oil"
+1111,,,,,24oz,24oz,26.99,http://image.com/argan-face-oil,Repairing Argan Facial Oil,"argan oil, cocunut oil"
+2222,clay-mask,Clay Face Mask,face-care,"face,mask,treatment",8oz,8oz,16.99,http://image.com/clay-mask,Resorative Clay Mask,"clay,  something"

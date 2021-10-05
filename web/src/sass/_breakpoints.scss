@@ -1,0 +1,78 @@
+$small-desktop: 960px;
+$large-desktop: 1200px;
+$handheld: 768px;
+$handhelds-landscape: 1024px;
+$mobile: 640px;
+$mobile-landscape: 480px;
+
+$xs-landscape: 480px;
+$xs: 640px;
+$sm: 768px;
+$md: 960px;
+$lg-landscape: 1024px;
+$lg: 1200px; // width 1200px and up
+
+@mixin breakpoint($media) {
+  // 1200px and up
+  @if $media == lg {
+    @media only screen and (min-width: $large-desktop) {
+      @content;
+    }
+  }
+  // 960px and below
+  @if $media == md {
+    @media only screen and (max-width: $small-desktop) {
+      @content;
+    }
+  }
+  // 768px and below
+  @if $media == sm {
+    @media only screen and (max-width: $handheld) {
+      @content;
+    }
+  }
+  // between 768px - 1024px w/ orientation landscape
+  @if $media == lg-landscape {
+    @media only screen and (min-device-width: $handheld) and (max-device-width: $handhelds-landscape) and (orientation: landscape) {
+      @content;
+    }
+  }
+  // 640px and below
+  @if $media == xs {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+  // 640px and below, potrait
+  @if $media == xs-portrait {
+    @media only screen and (max-width: $mobile) and (orientation: portrait) {
+      @content;
+    }
+  }
+  // between 320px - 480px, landscape
+  @if $media == xs-landscape {
+    @media only screen and (min-width: 320px) and (max-width: $mobile-landscape) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @if $media == retina {
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+
+  @if $media == iphone5 {
+    @media only screen and (device-aspect-ratio: 40/71) {
+      @content;
+    }
+  }
+}
+
+/* To be used like this */
+
+// body {
+//   @include respond-to(handhelds){
+//     // css code here
+//   }
+// }
